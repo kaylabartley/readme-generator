@@ -1,8 +1,5 @@
 
 /*Acceptance Criteria
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
 WHEN I enter my project !title!
 THEN this is displayed as the title of the README
 WHEN I enter a !description!, !installation instructions!, !usage information!, !contribution guidelines!, and !test instructions!
@@ -179,6 +176,24 @@ const promptUser = () => {
             choices: licenseArray
         },
         {
+            type: 'confirm',
+            name: 'confirmEmail',
+            message: 'Would you like to enter your email address for contact?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'emailAddress',
+            message: emailAddress,
+            when: ({ confirmEmail }) => {
+              if (confirmEmail) {
+                return true;
+              } else {
+                return false;
+              }
+            }
+        },
+        {
             type: 'input',
             name: 'username',
             message: username,
@@ -190,26 +205,7 @@ const promptUser = () => {
                 return false;
                 }
             }
-        },
-        {
-            type: 'confirm',
-            name: 'confirmEmail',
-            message: 'Would you like to enter your email address for contact?',
-            default: true
-        },
-        {
-            type: 'input',
-            name: 'contributing',
-            message: emailAddress,
-            when: ({ confirmEmail }) => {
-              if (confirmEmail) {
-                return true;
-              } else {
-                return false;
-              }
-            }
         }
-
     ]);
 }
 
@@ -217,7 +213,7 @@ const promptUser = () => {
 const init = () => {
     promptUser()
       .then(data => {
-        return generateReadme(data);
+        return generateReadme(data, licenseArray);
       })
       .then(markUp => {
         return writeToFile(markUp);
