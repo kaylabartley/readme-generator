@@ -52,8 +52,17 @@ const licenseArray = [
     'The zlib/libpng License'
 ];
 // array of questions for user
+//title, description, installation, usage, contributing, testing, license, username, emailAddress
 const questions = [
-
+    'Enter the title of your README: ',
+    'Write a description for your README:',
+    'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
+    'Provide instructions and examples for use of your project: ',
+    'Add contributor information: ',
+    'Enter testing information: ',
+    'Choose a license for your project (Check all that apply): ',
+    'Enter your GitHub username: ',
+    'Enter your email address: '
 ];
 
 // function to write README file
