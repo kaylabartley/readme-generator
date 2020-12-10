@@ -16,9 +16,9 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 */
-
+const fs = require('fs');
 const inquirer = require('inquirer');
-
+const generateReadme = require('./src/page-template');
 const licenseArray = [
 
 ];
@@ -28,7 +28,19 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {
+const writeToFile = data => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('./dist/index.html', data, err => {
+          if (err) {
+            reject(err);
+            return;
+          }
+          resolve({
+            ok: true,
+            message: 'File created!'
+          });
+        });
+      });
 }
 
 const promptUser = () => {
@@ -165,7 +177,19 @@ const promptUser = () => {
 
 // function to initialize program
 const init = () => {
-    promptUser();
+    promptUser()
+      .then(data => {
+        return generatePage(data);
+      })
+      .then(markUp => {
+        return writeToFile(markUp);
+      })
+      .then(writeFileResponse => {
+        console.log(writeFileResponse);
+      })
+      .catch(err => {
+        console.log(err);
+      });
 }
 
 // function call to initialize program
