@@ -1,11 +1,11 @@
 
-# y
+# README Generator
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0),[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/),[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC),[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
 
-y
+This application takes user input from the command line and produces a proffessional README page into the dist folder. It uses inquirer to prompt the user.
 
 
 ## Table of Contents 
@@ -13,34 +13,27 @@ y
 * [Installation](#installation)
 * [Usage](#usage)
 * [Licenses](#licenses)
-* [Contributing](#contributing)
-* [Testing](#testing)
 * [Questions](#questions)
 
 
 ## Installation
 
-y
+Clone the readme-generator on [GitHub Repository](https://github.com/kaylabartley/read-me-generator) to your computer using git clone. 
 
 
 ## Usage 
 
-y
-
+Using Git Bash or your command line, cd into the develop directory and then run the program using node index. Answer prompts and press enter to proceed. When choosing licenses, use the space bar to select a license and enter once you have selected all of your licenses.The finished professional README will be found in the dist directory, in the develop directory.
 
 ## Licenses
 
-Apache 2.0 License, CC0, Attribution-NonCommercial 4.0 International
-## Contributing
+ISC License (ISC), The MIT License
 
-y
-## Testing
-        
-y
+
 ## Questions
 
-y
+kaylabartley
 
-y
+kaylasierrabartley@gmail.com
 
     
