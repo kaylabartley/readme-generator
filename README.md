@@ -26,7 +26,7 @@ Using Git Bash or your command line, cd into the develop directory and then run 
 
 [Walkthrough Video](./Develop/assets/videos/walkthrough.mp4)
 
-[Example README Generated from this Application](./README.md)
+[Example README Generated from this Application](./Develop/dist/README.md)
 
 ## Licenses
 
