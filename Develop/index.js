@@ -68,7 +68,7 @@ const questions = [
 // function to write README file
 const writeToFile = data => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/index.html', data, err => {
+        fs.writeFile('./dist/README.md', data, err => {
           if (err) {
             reject(err);
             return;
@@ -82,7 +82,7 @@ const writeToFile = data => {
 }
 
 const promptUser = () => {
-    const {title, description, installation, usage, contributing, testing, license, username, emailAddress} = questions;
+    const [title, description, installation, usage, contributing, testing, license, username, emailAddress] = questions;
     return inquirer.prompt([
         {
             type: 'input',
@@ -217,7 +217,7 @@ const promptUser = () => {
 const init = () => {
     promptUser()
       .then(data => {
-        return generatePage(data);
+        return generateReadme(data);
       })
       .then(markUp => {
         return writeToFile(markUp);
