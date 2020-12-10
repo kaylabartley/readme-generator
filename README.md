@@ -24,7 +24,7 @@ Clone the readme-generator on [GitHub Repository](https://github.com/kaylabartle
 
 Using Git Bash or your command line, cd into the develop directory and then run the program using node index. Answer prompts and press enter to proceed. When choosing licenses, use the space bar to select a license and enter once you have selected all of your licenses.The finished professional README will be found in the dist directory, in the develop directory.
 
-[Walkthrough Video](./Develop/assets/videos/walkthrough.mp4)
+[Walkthrough Video](https://www.youtube.com/watch?v=w_4jdBSAlTg)
 
 [Example README Generated from this Application](./Develop/dist/README.md)
 
